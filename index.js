@@ -25,3 +25,4 @@ app.post('/ussd', (req, res) => {
     res.set("Content-Type: text/plain");
     res.send(response);
 });
+module.exports = app;
