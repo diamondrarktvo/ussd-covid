@@ -11,15 +11,15 @@ app.post('/ussd', (req, res) => {
     let response = "";
 
     if(text === ""){
-        response = `CON - Bienvenue sur infoCovid19. Choisissez une option:
+        response = `CON Bienvenue sur infoCovid19. Choisissez une option:
         1. Nouvelle information 
         2. Numeroako`;
     }else if(text === "1"){
-        response = `CON - Nouvelle information sur covid19. Choisissez une option:
+        response = `CON Nouvelle information sur covid19. Choisissez une option:
         1. Nombre de malade
         2. Nombre de décès`;
     }else if(text === "2"){
-        response = `END - Votre numéro téléphone est: ${phoneNumber}`;
+        response = `END Votre numéro téléphone est: ${phoneNumber}`;
     }
 
     res.set("Content-Type: text/plain");
