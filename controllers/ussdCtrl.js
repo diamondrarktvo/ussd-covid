@@ -14,15 +14,15 @@ exports.ussd = ('/ussd', (req, res) => {
             response = `CON Nouvelle information sur covid19. Choisissez une option:
                         1. Nombre de malade
                         2. Nombre de décès`;
-            let new_text = req.body.text;
-            if(new_text === "1"){
-                response = `END Le nombre de malade en ce moment est 128 000 personnes`;
-            }else if(new_text === "2"){
-                response = `END Le nombre de décès en ce moment est 24 000 personnes`;
-            }
             break;
         case "2":
             response = `END Votre numéro téléphone est: ${phoneNumber}`;
+            break;
+        case "1*1":
+            response = `END Nombre de malade: 100`;
+            break;
+        case "1*2":
+            response = `END Nombre de décès: 10`;
             break;
         default:
             break;
