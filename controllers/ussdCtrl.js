@@ -1,6 +1,6 @@
 exports.ussd = ('/ussd', (req, res) => {
-    const {sessionId, serviceCode, text} = req.body;
-    let {phoneNumber} = req.body;
+    const {sessionId, serviceCode} = req.body;
+    let {text,phoneNumber} = req.body;
     phoneNumber = phoneNumber !== undefined ? phoneNumber : "0345648425";
     let response = "";
 
@@ -14,10 +14,10 @@ exports.ussd = ('/ussd', (req, res) => {
             response = `CON Nouvelle information sur covid19. Choisissez une option:
                         1. Nombre de malade
                         2. Nombre de décès`;
-            text = req.body.text;
-            if(text === "1"){
+            let new_text = req.body.text;
+            if(new_text === "1"){
                 response = `END Le nombre de malade en ce moment est 128 000 personnes`;
-            }else if(text === "2"){
+            }else if(new_text === "2"){
                 response = `END Le nombre de décès en ce moment est 24 000 personnes`;
             }
             break;
