@@ -1,7 +1,7 @@
 exports.ussd = ('/ussd', (req, res) => {
     const {sessionId, serviceCode, text} = req.body;
     let {phoneNumber} = req.body;
-    phoneNumber = phoneNumber !== undefined ? phoneNumber : "0345648425"
+    phoneNumber = phoneNumber !== undefined ? phoneNumber : "0345648425";
     let response = "";
 
     switch(text){
