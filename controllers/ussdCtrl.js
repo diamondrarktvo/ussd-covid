@@ -38,8 +38,10 @@ exports.ussd =
         break;
       case "1": //Nouvelle information
         response = `CON Statistique sur le covid19 par région:
-                        1. Nombre de malade 
-                        2. Nombre de décès`;
+                        1. Nombre de malade par région
+                        2. Nombre de décès par région
+                        3. Nombre total des guéris
+                        4. Nombre total des cas`;
         break;
       case "2": //Centre de vaccination
         response = `CON Centre de vaccination par région: ${regions}`;
@@ -54,6 +56,12 @@ exports.ussd =
         break;
       case "1*2": //Nombre de décès
         response = `CON Nombre de décès par région: ${regions}`;
+        break;
+      case "1*3": //Nombre total des guéris
+        response = `END Nombre total des guéris: 200`;
+        break;
+      case "1*4": //Nombre total des cas
+        response = `END Nombre total des cas: 910`;
         break;
 
       /*==================================================*/
