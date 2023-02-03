@@ -37,25 +37,29 @@ exports.ussd =
                         3. Centre des hopitaux`;
         break;
       case "1": //Nouvelle information
-        response = `CON Statistique sur le covid19 par région:
+        response = `CON Statistique sur le covid19 :
                         1. Nombre de malade par région
                         2. Nombre de décès par région
                         3. Nombre total des guéris
                         4. Nombre total des cas`;
         break;
       case "2": //Centre de vaccination
-        response = `CON Centre de vaccination par région: ${regions}`;
+        response = `CON Centre de vaccination par région: 
+        ${regions}`;
         break;
       case "3": //Centre des hopitaux
-        response = `CON Centre des hopitaux par région: ${regions}`;
+        response = `CON Centre des hopitaux par région: 
+        ${regions}`;
         break;
 
       /*First level menu 1 dans nouvelle information*/
       case "1*1": //Nombre de malade
-        response = `CON Nombre de malade par région: ${regions}`;
+        response = `CON Nombre de malade par région: 
+        ${regions}`;
         break;
       case "1*2": //Nombre de décès
-        response = `CON Nombre de décès par région: ${regions}`;
+        response = `CON Nombre de décès par région: 
+        ${regions}`;
         break;
       case "1*3": //Nombre total des guéris
         response = `END Nombre total des guéris: 200`;
