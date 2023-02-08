@@ -128,6 +128,9 @@ exports.ussd =
         response = `END Les centres de vaccination à Vatovavy-Fitovinany:
             1. Hopital d'andovosira.`;
         break;
+        case"2**": //suivant
+        response = `CON Centre de vaccination par région:
+        ${region_part_two}`;
 
       /*First level menu 3 dans centre des hopitaux*/
       case "3*1": //Analamanga
