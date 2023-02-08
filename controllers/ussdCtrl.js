@@ -5,7 +5,7 @@ exports.ussd =
     let { text, phoneNumber } = req.body;
     phoneNumber = phoneNumber !== undefined ? phoneNumber : "0345648425";
     let response = "";
-    let regions = `1-Analamanga
+    let region_part_one = `1-Analamanga
       2-Vakinankaratra
       3-Bongolava
       4-SAVA
@@ -16,6 +16,8 @@ exports.ussd =
       9-Atsimo-Atsinanana
       10-Ihorombe
       11-Sofia
+      `;
+      let region_part_two = `
       12-Boeny
       13-Betsiboka
       14-Melaky
@@ -45,21 +47,23 @@ exports.ussd =
         break;
       case "2": //Centre de vaccination
         response = `CON Centre de vaccination par région: 
-        ${regions}`;
+        ${region_part_one}
+        *-suivant`;
         break;
       case "3": //Centre des hopitaux
         response = `CON Centre des hopitaux par région: 
-        ${regions}`;
+        ${region_part_one}
+        *-suivant`;
         break;
 
       /*First level menu 1 dans nouvelle information*/
       case "1*1": //Nombre de malade
         response = `CON Nombre de malade par région: 
-        ${regions}`;
+        ${region_part_one}`;
         break;
       case "1*2": //Nombre de décès
         response = `CON Nombre de décès par région: 
-        ${regions}`;
+        ${region_part_one}`;
         break;
       case "1*3": //Nombre total des guéris
         response = `END Nombre total des guéris: 200`;
