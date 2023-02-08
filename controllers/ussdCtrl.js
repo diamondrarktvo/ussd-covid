@@ -48,12 +48,12 @@ exports.ussd =
       case "2": //Centre de vaccination
         response = `CON Centre de vaccination par région: 
         ${region_part_one}
-        *-suivant`;
+        0-suivant`;
         break;
       case "3": //Centre des hopitaux
         response = `CON Centre des hopitaux par région: 
         ${region_part_one}
-        *-suivant`;
+        0-suivant`;
         break;
 
       /*First level menu 1 dans nouvelle information*/
@@ -128,7 +128,7 @@ exports.ussd =
         response = `END Les centres de vaccination à Vatovavy-Fitovinany:
             1. Hopital d'andovosira.`;
         break;
-        case"2**": //suivant
+      case"2*0": //suivant
         response = `CON Centre de vaccination par région:
         ${region_part_two}`;
 
