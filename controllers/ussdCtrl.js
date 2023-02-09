@@ -16,6 +16,7 @@ exports.ussd =
       9-Atsimo-Atsinanana
       10-Ihorombe
       11-Sofia
+      0-suivant
       `;
       let region_part_two = `
       12-Boeny
@@ -28,7 +29,8 @@ exports.ussd =
       19-Atsimo-Andrefana
       20-Androy
       21-Anosy
-      22-Itasy`;
+      22-Itasy
+      00-précedent`;
 
     switch (text) {
       /*Menu principale*/
@@ -48,12 +50,12 @@ exports.ussd =
       case "2": //Centre de vaccination
         response = `CON Centre de vaccination par région: 
         ${region_part_one}
-        0-suivant`;
+        `;
         break;
       case "3": //Centre des hopitaux
         response = `CON Centre des hopitaux par région: 
         ${region_part_one}
-        0-suivant`;
+        0. suivant`;
         break;
 
       /*First level menu 1 dans nouvelle information*/
