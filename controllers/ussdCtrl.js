@@ -16,7 +16,7 @@ exports.ussd =
       9-Atsimo-Atsinanana
       10-Ihorombe
       11-Sofia
-      0-suivant
+      00-suivant
       `;
       let region_part_two = `
       12-Boeny
@@ -30,7 +30,7 @@ exports.ussd =
       20-Androy
       21-Anosy
       22-Itasy
-      00-précedent`;
+      000-précedent`;
 
     switch (text) {
       /*Menu principale*/
@@ -54,8 +54,7 @@ exports.ussd =
         break;
       case "3": //Centre des hopitaux
         response = `CON Centre des hopitaux par région: 
-        ${region_part_one}
-        0. suivant`;
+        ${region_part_one}`;
         break;
 
       /*First level menu 1 dans nouvelle information*/
