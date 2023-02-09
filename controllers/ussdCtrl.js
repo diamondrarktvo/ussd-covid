@@ -151,13 +151,21 @@ exports.ussd =
                 2. HJRA.
                 3. Hopital Soavinandrina.`;
         break;
+      case "3*0": //précedent
+        response = `CON Centre des hopitaux par région:
+            ${region_part_two}`;
+        break;
+      case "3*0*00": //précedent
+        response = `CON Centre des hopitaux par région:
+            ${region_part_one}`;
+        break;
       case "3*2": //Vakinankaratra
         response = `END Les centres des hopitaux à Vakinankaratra:
                 1. Hopital d'Andranomadio.
                 2. Centre de traitement thermal d'Andranomafana.
                 3. Hopital Atsimo`;
         break;
-      case "3*12": //Boeny
+      case "3*0*12": //Boeny
         response = `END Les centres des hopitaux à Boeny:
                 1. Hopital d'Androvo.
                 2. Hopital Manarapenitra.`;
