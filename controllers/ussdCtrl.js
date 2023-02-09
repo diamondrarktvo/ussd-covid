@@ -129,7 +129,7 @@ exports.ussd =
         response = `END Les centres de vaccination à Vatovavy-Fitovinany:
             1. Hopital d'andovosira.`;
         break;
-      case"2*0": //suivant
+      case"2*00": //suivant
         response = `CON Centre de vaccination par région:
         ${region_part_two}`;
 
