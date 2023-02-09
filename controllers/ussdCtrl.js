@@ -16,7 +16,7 @@ exports.ussd =
       9-Atsimo-Atsinanana
       10-Ihorombe
       11-Sofia
-      00-suivant
+      0-suivant
       `;
       let region_part_two = `
       12-Boeny
@@ -30,7 +30,7 @@ exports.ussd =
       20-Androy
       21-Anosy
       22-Itasy
-      000-précedent`;
+      00-précedent`;
 
     switch (text) {
       /*Menu principale*/
@@ -129,9 +129,20 @@ exports.ussd =
         response = `END Les centres de vaccination à Vatovavy-Fitovinany:
             1. Hopital d'andovosira.`;
         break;
-      case"2*00": //suivant
+      case"2*0": //suivant
         response = `CON Centre de vaccination par région:
         ${region_part_two}`;
+        break;
+
+      /*Second level menu 2*0 dans centre de vaccination*/
+      case "2*0*16": //Vatovavy-Fitovinany
+        response = `END Les centres de vaccination à Antsinanana:
+            1. Hopital Manarapenitra Toamasina.`;
+        break;
+      case "2*0*00": //précedent
+        response = `CON Centre de vaccination par région:
+            ${region_part_one}`;
+        break;
 
       /*First level menu 3 dans centre des hopitaux*/
       case "3*1": //Analamanga
