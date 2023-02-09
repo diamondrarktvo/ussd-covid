@@ -135,13 +135,19 @@ exports.ussd =
         break;
 
       /*Second level menu 2*0 dans centre de vaccination*/
-      case "2*0*16": //Vatovavy-Fitovinany
+      case "2*0*16": //Antsinanana
         response = `END Les centres de vaccination à Antsinanana:
             1. Hopital Manarapenitra Toamasina.`;
         break;
       case "2*0*00": //précedent
         response = `CON Centre de vaccination par région:
             ${region_part_one}`;
+        break;
+      case "2*0*00*1": //Analamanga
+        response = `END Les centres de vaccination à Analamanga:
+            1. Centre de vaccination de  Mahamasina.
+            2. Centre de vaccination de Ankatso.
+            3. Centre de vaccination de Analamahitsy.`;
         break;
 
       /*First level menu 3 dans centre des hopitaux*/
@@ -151,7 +157,7 @@ exports.ussd =
                 2. HJRA.
                 3. Hopital Soavinandrina.`;
         break;
-      case "3*0": //précedent
+      case "3*0": //suivant
         response = `CON Centre des hopitaux par région:
             ${region_part_two}`;
         break;
